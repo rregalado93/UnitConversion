@@ -3,10 +3,10 @@
 ## this calculator converts Unit
 
 * [Git CheatSheet]https://www.git-tower.com/blog/git-cheat-sheet/
-* [Markdown cheatsheet]
+* [Markdown cheatsheet]https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet#emphasis
 
 ### Angular MVC
-
+![Angular is a client-side Javascript MVC framework](http://hop.ie/talks/angular-intro/images/angularjs.jpeg)
 this code is _**simple**_:
 
 ```javascript
