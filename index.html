@@ -10,7 +10,9 @@
         
         <div>
             <p> Length Conversions</p>
-            <input type="number" , ng-model="lengthNum">
+            <input ng-click="clearLength();", type="button", value="clear">
+            <input type="number" , ng-model="lengthNum", placeholder="Enter Value">
+            
             <select ng-model="LengthUnit" ng-options="s.unitName for s in LengthUnits"></select>
             <select ng-model="LengthUnit2" ng-options="s.unitName for s in LengthUnits2"></select>
             <div ng-cloak ng-if="lengthNum">
@@ -20,24 +22,26 @@
 		
 		<div>
 		    <p>Weight/Mass Conversions </p>
-		    <input type="number" ng-model="weightNum">
+		    <input ng-click="clearWeight();", type="button", value="clear">
+		    <input type="number" ng-model="weightNum", placeholder="Enter Value">
 		    <select ng-model="WeightUnit" ng-options="s.unitName for s in WeightUnits"></select>
 		    <select ng-model="WeightUnit2" ng-options="s.unitName for s in WeightUnits2"></select>
 		    <div ng-cloak ng-if="weightNum">
 		        <p> {{weightNum}} <span ng-bind="WeightUnit.unitName"></span> is {{weightConverter()}} <span ng-bind="WeightUnit2.unitName"></span></p>
 		    </div>
 		</div>
-
 		
-		
+		<div>
+		    <p>Area Conversions </p>
+		    <input ng-click="clearArea();", type="button", value="clear">
+		    <input type="number" ng-model="areaNum", placeholder="Enter Value">
+		    <select ng-model="AreaUnit" ng-options="s.unitName for s in AreaUnits"></select>
+		    <select ng-model="AreaUnit2" ng-options="s.unitName for s in AreaUnits2"></select>
+		    <div ng-cloak ng-if="areaNum">
+		        <p> {{areaNum}} <span ng-bind="AreaUnit.unitName"></span> is {{areaConverter()}} <span ng-bind="AreaUnit2.unitName"></span></p>
+		    </div>
+		</div>
     </div>
-
-
-
-
-
-
-
 
     <script src="https://code.angularjs.org/1.6.1/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.6.1/angular-animate.min.js"></script>

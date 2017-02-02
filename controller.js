@@ -710,6 +710,379 @@ angular.module('UnitConverter', [])
             
         };
         
+        $scope.AreaUnits =[
+            {
+                unitName: "square millimeter/s[mm]",
+
+            },
+            {
+                unitName: "square centimeter/s[cm]",
+
+            },
+            {
+                unitName: "square meter/s[m]",
+
+            },
+            {
+                unitName: "square kilometer/s[km]",
+
+            },
+            {
+                unitName: "square inch/s[in]",
+
+            },
+            {
+                unitName: "square foot/s[ft]",
+
+            },
+            {
+                unitName: "square yard/s[yd]",
+
+            },
+            {
+                unitName: "square mile/s[mi]",
+
+            }
+            ];
+            
+        $scope.AreaUnit = $scope.AreaUnits[0];
+        
+        $scope.AreaUnits2 =[
+            {
+                unitName: "square millimeter/s[mm]",
+
+            },
+            {
+                unitName: "square centimeter/s[cm]",
+
+            },
+            {
+                unitName: "square meter/s[m]",
+
+            },
+            {
+                unitName: "square kilometer/s[km]",
+
+            },
+            {
+                unitName: "square inch/s[in]",
+
+            },
+            {
+                unitName: "square foot/s[ft]",
+
+            },
+            {
+                unitName: "square yard/s[yd]",
+
+            },
+            {
+                unitName: "square mile/s[mi]",
+
+            }
+            ];
+            
+        $scope.AreaUnit2 = $scope.AreaUnits2[0];
+        
+        $scope.areaConverter = function(){
+          $scope.areaNum;
+          
+          if($scope.AreaUnit == $scope.AreaUnits[0])
+          {
+              if($scope.AreaUnit2 == $scope.AreaUnits2[0]) 
+              {
+                  return $scope.areaNum;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[1]) 
+              {
+                  return $scope.areaNum * 0.01;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[2]) 
+              {
+                  return $scope.areaNum * 1e-6;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[3]) 
+              {
+                  return $scope.areaNum * 1e-12;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[4]) 
+              {
+                  return $scope.areaNum * 0.00155;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[5]) 
+              {
+                  return $scope.areaNum * 1.07639e-5;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[6]) 
+              {
+                  return $scope.areaNum * 1.19599e-6;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[7]) 
+              {
+                  return $scope.areaNum * 3.86102e-13;
+              }
+          }
+          if($scope.AreaUnit == $scope.AreaUnits[1])
+          {
+              if($scope.AreaUnit2 == $scope.AreaUnits2[0]) 
+              {
+                  return $scope.areaNum * 100;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[1]) 
+              {
+                  return $scope.areaNum;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[2]) 
+              {
+                  return $scope.areaNum * 0.0001;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[3]) 
+              {
+                  return $scope.areaNum * 1e-10;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[4]) 
+              {
+                  return $scope.areaNum * 0.155;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[5]) 
+              {
+                  return $scope.areaNum * 0.00107639;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[6]) 
+              {
+                  return $scope.areaNum * 0.000119599;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[7]) 
+              {
+                  return $scope.areaNum * 3.86102e-11;
+              }
+          }
+          if($scope.AreaUnit == $scope.AreaUnits[2])
+          {
+              if($scope.AreaUnit2 == $scope.AreaUnits2[0]) 
+              {
+                  return $scope.areaNum * 1000000;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[1]) 
+              {
+                  return $scope.areaNum * 10000;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[2]) 
+              {
+                  return $scope.areaNum;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[3]) 
+              {
+                  return $scope.areaNum * 1e-6;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[4]) 
+              {
+                  return $scope.areaNum * 1550;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[5]) 
+              {
+                  return $scope.areaNum * 10.7639;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[6]) 
+              {
+                  return $scope.areaNum * 1.19599;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[7]) 
+              {
+                  return $scope.areaNum * 3.86102e-7;
+              }
+          }
+          if($scope.AreaUnit == $scope.AreaUnits[3])
+          {
+              if($scope.AreaUnit2 == $scope.AreaUnits2[0]) 
+              {
+                  return $scope.areaNum * 1e+12;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[1]) 
+              {
+                  return $scope.areaNum * 1e+10;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[2]) 
+              {
+                  return $scope.areaNum * 1000000;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[3]) 
+              {
+                  return $scope.areaNum;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[4]) 
+              {
+                  return $scope.areaNum * 1.55e+9;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[5]) 
+              {
+                  return $scope.areaNum * 1.076e+7;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[6]) 
+              {
+                  return $scope.areaNum * 1.196e+6;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[7]) 
+              {
+                  return $scope.areaNum * 0.386102;
+              }
+          }
+          if($scope.AreaUnit == $scope.AreaUnits[4])
+          {
+              if($scope.AreaUnit2 == $scope.AreaUnits2[0]) 
+              {
+                  return $scope.areaNum * 645.16;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[1]) 
+              {
+                  return $scope.areaNum * 6.4516;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[2]) 
+              {
+                  return $scope.areaNum * 0.00064516;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[3]) 
+              {
+                  return $scope.areaNum * 6.4516e-10;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[4]) 
+              {
+                  return $scope.areaNum;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[5]) 
+              {
+                  return $scope.areaNum * 0.00694444;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[6]) 
+              {
+                  return $scope.areaNum * 0.000771605;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[7]) 
+              {
+                  return $scope.areaNum * 2.49098e-10;
+              }
+          }
+          if($scope.AreaUnit == $scope.AreaUnits[5])
+          {
+              if($scope.AreaUnit2 == $scope.AreaUnits2[0]) 
+              {
+                  return $scope.areaNum * 92903;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[1]) 
+              {
+                  return $scope.areaNum * 929.03;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[2]) 
+              {
+                  return $scope.areaNum * 0.092903;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[3]) 
+              {
+                  return $scope.areaNum * 9.2903e-8;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[4]) 
+              {
+                  return $scope.areaNum * 144;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[5]) 
+              {
+                  return $scope.areaNum;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[6]) 
+              {
+                  return $scope.areaNum * 0.111111;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[7]) 
+              {
+                  return $scope.areaNum * 3.58701e-8;
+              }
+          }
+          if($scope.AreaUnit == $scope.AreaUnits[6])
+          {
+              if($scope.AreaUnit2 == $scope.AreaUnits2[0]) 
+              {
+                  return $scope.areaNum * 836127;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[1]) 
+              {
+                  return $scope.areaNum * 8361.27;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[2]) 
+              {
+                  return $scope.areaNum * 0.836127;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[3]) 
+              {
+                  return $scope.areaNum * 8.36127e-7;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[4]) 
+              {
+                  return $scope.areaNum * 1296;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[5]) 
+              {
+                  return $scope.areaNum * 9;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[6]) 
+              {
+                  return $scope.areaNum;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[7]) 
+              {
+                  return $scope.areaNum * 3.22831e-7;
+              }
+          }
+          if($scope.AreaUnit == $scope.AreaUnits[7])
+          {
+              if($scope.AreaUnit2 == $scope.AreaUnits2[0]) 
+              {
+                  return $scope.areaNum * 2.59e+12;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[1]) 
+              {
+                  return $scope.areaNum * 2.59e+10;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[2]) 
+              {
+                  return $scope.areaNum * 2.59e+6;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[3]) 
+              {
+                  return $scope.areaNum * 2.58999;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[4]) 
+              {
+                  return $scope.areaNum * 4.014e+9;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[5]) 
+              {
+                  return $scope.areaNum * 2.788e+7;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[6]) 
+              {
+                  return $scope.areaNum * 3.098e+6;
+              }
+              if($scope.AreaUnit2 == $scope.AreaUnits2[7]) 
+              {
+                  return $scope.areaNum;
+              }
+          }
+          
+        };
+        
+        
+        $scope.clearWeight = function(){
+            $scope.weightNum = '';
+        };
+        
+        $scope.clearLength = function(){
+            $scope.lengthNum = '';
+        };
+        
+        $scope.clearArea = function(){
+            $scope.areaNum = '';
+        };
+        
 
         
             
