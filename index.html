@@ -2,50 +2,91 @@
 
 <head>
     <title>Unit Converter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.js" type="text/css" />
+    <link rel="stylesheet" href="/UnitCalculator/mod.css" type="text/css" />
 </head>
 
 <body>
-    <h1>Converter App</h1>
-    <div ng-controller="UnitController">
-        
-        <div>
-            <p> Length Conversions</p>
-            <input ng-click="clearLength();", type="button", value="clear">
-            <input type="number" , ng-model="lengthNum", placeholder="Enter Value">
-            
-            <select ng-model="LengthUnit" ng-options="s.unitName for s in LengthUnits"></select>
-            <select ng-model="LengthUnit2" ng-options="s.unitName for s in LengthUnits2"></select>
-            <div ng-cloak ng-if="lengthNum">
-                <p>{{lengthNum}} <span ng-bind="LengthUnit.unitName"></span> is {{lengthConverter()}} <span ng-bind="LengthUnit2.unitName"></span></p>
-		    </div>
-		</div>
-		
-		<div>
-		    <p>Weight/Mass Conversions </p>
-		    <input ng-click="clearWeight();", type="button", value="clear">
-		    <input type="number" ng-model="weightNum", placeholder="Enter Value">
-		    <select ng-model="WeightUnit" ng-options="s.unitName for s in WeightUnits"></select>
-		    <select ng-model="WeightUnit2" ng-options="s.unitName for s in WeightUnits2"></select>
-		    <div ng-cloak ng-if="weightNum">
-		        <p> {{weightNum}} <span ng-bind="WeightUnit.unitName"></span> is {{weightConverter()}} <span ng-bind="WeightUnit2.unitName"></span></p>
-		    </div>
-		</div>
-		
-		<div>
-		    <p>Area Conversions </p>
-		    <input ng-click="clearArea();", type="button", value="clear">
-		    <input type="number" ng-model="areaNum", placeholder="Enter Value">
-		    <select ng-model="AreaUnit" ng-options="s.unitName for s in AreaUnits"></select>
-		    <select ng-model="AreaUnit2" ng-options="s.unitName for s in AreaUnits2"></select>
-		    <div ng-cloak ng-if="areaNum">
-		        <p> {{areaNum}} <span ng-bind="AreaUnit.unitName"></span> is {{areaConverter()}} <span ng-bind="AreaUnit2.unitName"></span></p>
-		    </div>
-		</div>
+    <div class="container">
+        <h1>Converter App</h1>
+        <div ng-controller="UnitController">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><a href="#" onclick="jQuery(this).parent().toggleClass('active'); 
+					jQuery(this).parent().parent().next().slideToggle(); return false">Length Conversion<span class="caret"></span></a></h3>
+                </div>
+                <div class="panel-body" style="display: block;">
+                    <input ng-click="clearLength();" , type="button" , value="clear">
+                    <input type="number" , ng-model="lengthNum" , placeholder="Enter Value">
+
+                    <select ng-model="LengthUnit" ng-options="s.unitName for s in LengthUnits"></select>
+                    <select ng-model="LengthUnit2" ng-options="s.unitName for s in LengthUnits2"></select>
+                    <div ng-cloak ng-if="lengthNum">
+                        <p>{{lengthNum}} <span ng-bind="LengthUnit.unitName"></span> is {{lengthConverter()}} <span ng-bind="LengthUnit2.unitName"></span></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><a href="#" onclick="jQuery(this).parent().toggleClass('active'); 
+					jQuery(this).parent().parent().next().slideToggle(); return false">Weigth/Mass Conversion<span class="caret"></span></a></h3>
+                </div>
+                <div class="panel-body" style="display: block;">
+                    <input ng-click="clearWeight();" , type="button" , value="clear">
+                    <input type="number" ng-model="weightNum" , placeholder="Enter Value">
+                    <select ng-model="WeightUnit" ng-options="s.unitName for s in WeightUnits"></select>
+                    <select ng-model="WeightUnit2" ng-options="s.unitName for s in WeightUnits2"></select>
+                    <div ng-cloak ng-if="weightNum">
+                        <p> {{weightNum}} <span ng-bind="WeightUnit.unitName"></span> is {{weightConverter()}} <span ng-bind="WeightUnit2.unitName"></span></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><a href="#" onclick="jQuery(this).parent().toggleClass('active'); 
+					jQuery(this).parent().parent().next().slideToggle(); return false">Area Conversion<span class="caret"></span></a></h3>
+                </div>
+                <div class="panel-body">
+                    <input ng-click="clearArea();" , type="button" , value="clear">
+                    <input type="number" ng-model="areaNum" , placeholder="Enter Value">
+                    <select ng-model="AreaUnit" ng-options="s.unitName for s in AreaUnits"></select>
+                    <select ng-model="AreaUnit2" ng-options="s.unitName for s in AreaUnits2"></select>
+                    <div ng-cloak ng-if="areaNum">
+                        <p> {{areaNum}} <span ng-bind="AreaUnit.unitName"></span> is {{areaConverter()}} <span ng-bind="AreaUnit2.unitName"></span></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><a href="#" onclick="jQuery(this).parent().toggleClass('active'); 
+					jQuery(this).parent().parent().next().slideToggle(); return false">Volume Conversion<span class="caret"></span></a></h3>
+                </div>
+                <div class="panel-body">
+                    <input ng-click="clearVolume();" , type="button" , value="clear">
+                    <input type="number" ng-model="volumeNum" , placeholder="Enter Value">
+                    <select ng-model="VolumeUnit" ng-options="s.unitName for s in VolumeUnits"></select>
+                    <select ng-model="VolumeUnit2" ng-options="s.unitName for s in VolumeUnits2"></select>
+                    <div ng-cloak ng-if="volumeNum">
+                        <p> {{volumeNum}} <span ng-bind="VolumeUnit.unitName"></span> is {{volumeConverter()}} <span ng-bind="VolumeUnit2.unitName"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 
     <script src="https://code.angularjs.org/1.6.1/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.6.1/angular-animate.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="controller.js"></script>
+
 </body>
 
 </html>

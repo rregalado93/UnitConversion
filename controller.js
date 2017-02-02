@@ -1070,19 +1070,365 @@ angular.module('UnitConverter', [])
           
         };
         
+        $scope.VolumeUnits = [
+            {
+                unitName: "cubic centimeter/s[cm3]"
+            },
+            {
+                unitName: "cubic metre/s[m3]"
+            },
+            {
+                unitName: "litre/s[l]"
+            },
+            {
+                unitName: "cubic inch/s[in3]"
+            },
+            {
+                unitName: "cubic feet [ft3]"
+            },
+            {
+                unitName: "fluid ounce/s[fl oz]"
+            },
+            {
+                unitName: "gallon/s [gal]"
+            },
+            {
+                unitName: "US gallon/s [US gal]"
+            },
+            ];
+            
+        $scope.VolumeUnit = $scope.VolumeUnits[0];
+        
+        $scope.VolumeUnits2 = [
+            {
+                unitName: "cubic centimeter/s[cm3]"
+            },
+            {
+                unitName: "cubic metre/s[m3]"
+            },
+            {
+                unitName: "litre/s[l]"
+            },
+            {
+                unitName: "cubic inch/s[in3]"
+            },
+            {
+                unitName: "cubic feet [ft3]"
+            },
+            {
+                unitName: "fluid ounce/s[fl oz]"
+            },
+            {
+                unitName: "gallon/s [gal]"
+            },
+            {
+                unitName: "US gallon/s [US gal]"
+            },
+            ];
+            
+        $scope.VolumeUnit2 = $scope.VolumeUnits2[0];
+        
+        $scope.volumeConverter = function(){
+          $scope.volumeNum;
+          
+          if($scope.VolumeUnit == $scope.VolumeUnits[0])
+          {
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[0])
+              {
+                  return $scope.volumeNum;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[1])
+              {
+                  return $scope.volumeNum * 1e-6;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[2])
+              {
+                  return $scope.volumeNum * 0.001;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[3])
+              {
+                  return $scope.volumeNum * 0.0610237;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[4])
+              {
+                  return $scope.volumeNum * 3.53147e-5;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[5])
+              {
+                  return $scope.volumeNum * 0.033814;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[6])
+              {
+                  return $scope.volumeNum * 0.000219969;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[7])
+              {
+                  return $scope.volumeNum * 0.000264172;
+              }
+          }
+          if($scope.VolumeUnit == $scope.VolumeUnits[1])
+          {
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[0])
+              {
+                  return $scope.volumeNum * 1000000;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[1])
+              {
+                  return $scope.volumeNum;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[2])
+              {
+                  return $scope.volumeNum * 1000;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[3])
+              {
+                  return $scope.volumeNum * 61023.7;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[4])
+              {
+                  return $scope.volumeNum * 35.3147;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[5])
+              {
+                  return $scope.volumeNum * 33814;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[6])
+              {
+                  return $scope.volumeNum * 219.969;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[7])
+              {
+                  return $scope.volumeNum * 264.172;
+              }
+          }
+          if($scope.VolumeUnit == $scope.VolumeUnits[2])
+          {
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[0])
+              {
+                  return $scope.volumeNum * 1000;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[1])
+              {
+                  return $scope.volumeNum * 0.001;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[2])
+              {
+                  return $scope.volumeNum;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[3])
+              {
+                  return $scope.volumeNum * 61.0237;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[4])
+              {
+                  return $scope.volumeNum * 0.0353147;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[5])
+              {
+                  return $scope.volumeNum * 33.814;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[6])
+              {
+                  return $scope.volumeNum * 0.219969;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[7])
+              {
+                  return $scope.volumeNum * 0.264172;
+              }
+          }
+          if($scope.VolumeUnit == $scope.VolumeUnits[3])
+          {
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[0])
+              {
+                  return $scope.volumeNum * 16.3871;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[1])
+              {
+                  return $scope.volumeNum * 1.63871e-5;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[2])
+              {
+                  return $scope.volumeNum * 0.0163871;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[3])
+              {
+                  return $scope.volumeNum;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[4])
+              {
+                  return $scope.volumeNum * 0.000578704;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[5])
+              {
+                  return $scope.volumeNum * 0.554113;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[6])
+              {
+                  return $scope.volumeNum * 0.0036046465453;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[7])
+              {
+                  return $scope.volumeNum * 0.004329;
+              }
+          }
+          if($scope.VolumeUnit == $scope.VolumeUnits[4])
+          {
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[0])
+              {
+                  return $scope.volumeNum * 28316.8;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[1])
+              {
+                  return $scope.volumeNum * 0.0283168;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[2])
+              {
+                  return $scope.volumeNum * 28.3168;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[3])
+              {
+                  return $scope.volumeNum * 1728;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[4])
+              {
+                  return $scope.volumeNum;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[5])
+              {
+                  return $scope.volumeNum * 957.506;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[6])
+              {
+                  return $scope.volumeNum * 6.22884;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[7])
+              {
+                  return $scope.volumeNum * 7.48052;
+              }
+          }
+          if($scope.VolumeUnit == $scope.VolumeUnits[5])
+          {
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[0])
+              {
+                  return $scope.volumeNum * 29.5735;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[1])
+              {
+                  return $scope.volumeNum * 2.95735e-5;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[2])
+              {
+                  return $scope.volumeNum * 0.0295735;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[3])
+              {
+                  return $scope.volumeNum * 1.80469;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[4])
+              {
+                  return $scope.volumeNum * 0.00104438;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[5])
+              {
+                  return $scope.volumeNum;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[6])
+              {
+                  return $scope.volumeNum * 0.00650527;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[7])
+              {
+                  return $scope.volumeNum * 0.0078125;
+              }
+          }
+          if($scope.VolumeUnit == $scope.VolumeUnits[6])
+          {
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[0])
+              {
+                  return $scope.volumeNum * 4546.09;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[1])
+              {
+                  return $scope.volumeNum * 0.00454609;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[2])
+              {
+                  return $scope.volumeNum * 4.54609;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[3])
+              {
+                  return $scope.volumeNum * 277.419;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[4])
+              {
+                  return $scope.volumeNum * 0.160544;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[5])
+              {
+                  return $scope.volumeNum * 153.722;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[6])
+              {
+                  return $scope.volumeNum;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[7])
+              {
+                  return $scope.volumeNum * 1.20095;
+              }
+          }
+          if($scope.VolumeUnit == $scope.VolumeUnits[7])
+          {
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[0])
+              {
+                  return $scope.volumeNum * 3785.41;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[1])
+              {
+                  return $scope.volumeNum * 0.00378541;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[2])
+              {
+                  return $scope.volumeNum * 3.78541;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[3])
+              {
+                  return $scope.volumeNum * 231;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[4])
+              {
+                  return $scope.volumeNum * 0.133681;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[5])
+              {
+                  return $scope.volumeNum * 128;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[6])
+              {
+                  return $scope.volumeNum * 0.832674;
+              }
+              if($scope.VolumeUnit2 == $scope.VolumeUnits2[7])
+              {
+                  return $scope.volumeNum;
+              }
+          }
+            
+        };
+            
+        $scope.clearLength = function(){
+            $scope.lengthNum = '';
+        };
         
         $scope.clearWeight = function(){
             $scope.weightNum = '';
-        };
-        
-        $scope.clearLength = function(){
-            $scope.lengthNum = '';
         };
         
         $scope.clearArea = function(){
             $scope.areaNum = '';
         };
         
+        $scope.clearVolume = function(){
+            $scope.volumeNum = '';
+        };
 
         
             
