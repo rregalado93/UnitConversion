@@ -8,7 +8,7 @@
 
 <body>
     <div class="container">
-        <h1>Converter App</h1>
+        <h1 align="center">Unit Converter</h1>
         <div ng-controller="UnitController">
 
             <div class="panel panel-default">
@@ -22,7 +22,7 @@
 
                     <select ng-model="LengthUnit" ng-options="s.unitName for s in LengthUnits"></select>
                     <select ng-model="LengthUnit2" ng-options="s.unitName for s in LengthUnits2"></select>
-                    <div ng-cloak ng-if="lengthNum">
+                    <div ng-cloak ng-if="lengthNum"></br>
                         <p>{{lengthNum}} <span ng-bind="LengthUnit.unitName"></span> is {{lengthConverter()}} <span ng-bind="LengthUnit2.unitName"></span></p>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                     <input type="number" ng-model="weightNum" , placeholder="Enter Value">
                     <select ng-model="WeightUnit" ng-options="s.unitName for s in WeightUnits"></select>
                     <select ng-model="WeightUnit2" ng-options="s.unitName for s in WeightUnits2"></select>
-                    <div ng-cloak ng-if="weightNum">
+                    <div ng-cloak ng-if="weightNum"></br>
                         <p> {{weightNum}} <span ng-bind="WeightUnit.unitName"></span> is {{weightConverter()}} <span ng-bind="WeightUnit2.unitName"></span></p>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                     <input type="number" ng-model="areaNum" , placeholder="Enter Value">
                     <select ng-model="AreaUnit" ng-options="s.unitName for s in AreaUnits"></select>
                     <select ng-model="AreaUnit2" ng-options="s.unitName for s in AreaUnits2"></select>
-                    <div ng-cloak ng-if="areaNum">
+                    <div ng-cloak ng-if="areaNum"></br>
                         <p> {{areaNum}} <span ng-bind="AreaUnit.unitName"></span> is {{areaConverter()}} <span ng-bind="AreaUnit2.unitName"></span></p>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                     <input type="number" ng-model="volumeNum" , placeholder="Enter Value">
                     <select ng-model="VolumeUnit" ng-options="s.unitName for s in VolumeUnits"></select>
                     <select ng-model="VolumeUnit2" ng-options="s.unitName for s in VolumeUnits2"></select>
-                    <div ng-cloak ng-if="volumeNum">
+                    <div ng-cloak ng-if="volumeNum"></br>
                         <p> {{volumeNum}} <span ng-bind="VolumeUnit.unitName"></span> is {{volumeConverter()}} <span ng-bind="VolumeUnit2.unitName"></span></p>
                     </div>
                 </div>
